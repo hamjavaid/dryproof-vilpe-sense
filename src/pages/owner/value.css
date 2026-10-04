@@ -1,0 +1,35 @@
+/* Value calculator */
+.value-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (min-width: 960px) { .value-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); } }
+
+.vf-list { display: grid; gap: 14px; margin-top: 14px; }
+.vf { display: grid; gap: 4px; }
+.vf-label { font-weight: 600; font-size: 0.92rem; }
+.vf-input { display: flex; align-items: center; gap: 8px; max-width: 260px; height: 44px; padding: 0 12px; border: 1px solid #b9c7d4; border-radius: 10px; background: #f3f7fb; }
+.vf-input:focus-within { border-color: var(--slate); box-shadow: 0 0 0 3px var(--slate-soft); }
+.vf-input input { flex: 1; min-width: 0; border: none; background: none; outline: none; font-size: 1.05rem; font-weight: 600; color: var(--slate-dark); font-variant-numeric: tabular-nums; }
+.vf-input i { font-style: normal; color: var(--ink-3); font-size: 0.86rem; white-space: nowrap; }
+.vf-hint { font-size: 0.78rem; color: var(--ink-3); }
+
+.value-result { display: grid; gap: 16px; }
+.vl { list-style: none; margin: 0; padding: 0; }
+.vl li { display: grid; grid-template-columns: 32px 1fr auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line-2); }
+.vl-icon { width: 32px; height: 32px; border-radius: 50%; display: grid; place-items: center; background: var(--moss-soft); color: var(--moss); }
+.vl li > span:nth-child(2) { display: grid; line-height: 1.35; }
+.vl li > span:nth-child(2) > span { font-size: 0.8rem; color: var(--ink-3); }
+.vl-value { font-weight: 700; font-size: 1.05rem; }
+
+.vbars { display: grid; gap: 8px; }
+.vbars > div { display: grid; grid-template-columns: 50px 1fr auto; gap: 10px; align-items: center; font-size: 0.86rem; }
+.vbars > div > span { color: var(--ink-2); }
+.vbars i { position: relative; height: 12px; border-radius: 6px; max-width: 100%; transition: width 0.25s; }
+.vbars i.v { background: var(--moss); }
+.vbars i.c { background: #b7c0c1; }
+.vbars > div { position: relative; }
+.vbars strong { min-width: 74px; text-align: right; }
+
+.vnet { display: grid; gap: 2px; padding: 16px 18px; border-radius: 12px; }
+.vnet.ok { background: var(--moss-soft); color: #3c5f2b; }
+.vnet.bad { background: var(--brick-soft); color: #8e3424; }
+.vnet strong { font-size: 2.1rem; line-height: 1.1; letter-spacing: -0.02em; }
+.vnet span { font-size: 0.88rem; }

@@ -1,0 +1,31 @@
+/* Story (pitch mode) */
+.story {
+  min-height: 100vh; display: grid; grid-template-rows: auto 1fr auto;
+  background: radial-gradient(ellipse at 50% 30%, #1d3d63 0%, #0f2843 60%, #0a1d31 100%); color: #e6edf5;
+}
+.story-loading { padding: 20px; }
+.story-top { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px; gap: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.06); }
+.story-top .btn, .story-nav .btn { background: transparent; color: #e6ecea; border-color: rgba(230, 236, 234, 0.55); }
+.story-top .btn:hover, .story-nav .btn:hover { border-color: #fff; }
+
+.story-body {
+  max-width: 920px; width: 100%; margin: 0 auto; padding: 28px 20px;
+  display: grid; justify-items: center; align-content: center; gap: 18px; text-align: center;
+  animation: story-in 0.35s ease-out;
+}
+@keyframes story-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .story-body { animation: none; } }
+.story-step { color: #9fb3c8; font-size: 1rem; }
+.story-body h1 { color: #fff; font-size: clamp(1.9rem, 5vw, 3.3rem); font-weight: 700; max-width: 24ch; }
+.story-big { font-size: clamp(3.4rem, 13vw, 7rem); font-weight: 700; line-height: 1; color: #fff; letter-spacing: -0.03em; }
+.story-big small { display: block; font-size: 1.05rem; font-weight: 400; color: #9fb3c8; margin-top: 10px; letter-spacing: 0; }
+.story-text { font-size: clamp(1.02rem, 1.8vw, 1.2rem); max-width: 58ch; color: #c8d6e6; line-height: 1.55; }
+.story-art { width: 100%; max-width: 620px; }
+.story-live { background: var(--vilpe-blue); border-color: var(--vilpe-blue); color: #fff; min-height: 50px; padding: 0 26px; font-size: 1.02rem; box-shadow: 0 8px 22px rgba(0, 90, 170, 0.4); }
+.story-live:hover { background: #00468a; border-color: #00468a; }
+
+.story-nav { display: flex; justify-content: space-between; align-items: center; padding: 16px 24px 24px; gap: 10px; border-top: 1px solid rgba(255, 255, 255, 0.06); }
+.story-dots { display: flex; gap: 4px; }
+.story-dots button { width: 22px; height: 22px; padding: 0; border: none; background: none; display: grid; place-items: center; }
+.story-dots button::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: #3a5677; transition: background 0.2s; }
+.story-dots button.on::before { background: #fff; }

@@ -1,0 +1,50 @@
+.lg { min-height: 100%; display: grid; grid-template-columns: 1fr; background: var(--bg); }
+
+/* Left: dark panel with the warehouse drawing */
+.lg-art { display: none; }
+@media (min-width: 900px) {
+  .lg { grid-template-columns: 1fr 1fr; }
+  .lg-art {
+    display: flex; flex-direction: column; justify-content: center; gap: 18px;
+    padding: 56px 56px 48px; background: radial-gradient(ellipse at 30% 20%, #1d3d63 0%, #0f2843 65%); color: #c8d6e6;
+  }
+}
+.lg-kicker { color: #9fb3c8; font-size: 0.95rem; }
+.lg-title { color: #f3f6f5; font-weight: 400; font-stretch: 100%; font-size: clamp(2.4rem, 3.6vw, 3.4rem); line-height: 1.1; letter-spacing: -0.02em; max-width: 15ch; }
+.warehouse-iso { width: 100%; max-width: 480px; height: auto; color: #8fa9c6; margin: 8px 0; }
+.lg-foot { color: #dfe6e4; text-align: center; max-width: 480px; font-size: 0.95rem; }
+
+/* Right: centred white card */
+.lg-side { display: flex; align-items: center; justify-content: center; padding: 32px 18px; }
+.lg-card {
+  width: 100%; max-width: 380px; background: #fff; border: 1px solid #d9dedc; border-radius: 10px;
+  padding: 26px 20px 20px; box-shadow: 0 6px 24px rgba(30, 42, 43, 0.08); display: flex; flex-direction: column;
+}
+.lg-name { text-align: center; font-weight: 400; font-stretch: 100%; font-size: 1.55rem; margin-top: 8px; }
+.lg-sub { text-align: center; color: #3c4748; font-size: 0.88rem; margin: 6px 0 18px; }
+
+.lg-roles { display: grid; gap: 8px; margin-bottom: 14px; }
+.lg-role {
+  display: flex; align-items: flex-start; gap: 12px; width: 100%; text-align: left;
+  padding: 10px 12px; border: 1px solid #cfd5d3; border-radius: 6px; background: #fff; color: var(--ink);
+}
+.lg-role[aria-pressed='true'] { border: 2px solid var(--vilpe-blue); background: var(--slate-soft); padding: 9px 11px; }
+.lg-dot { width: 14px; height: 14px; border-radius: 50%; flex: none; margin-top: 3px; }
+.lg-role-text { display: grid; gap: 2px; min-width: 0; flex: 1; }
+.lg-role-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.lg-role-title { font-size: 0.92rem; white-space: nowrap; }
+.lg-role-mail { font-size: 0.68rem; color: #3c4748; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.lg-role-sub { font-size: 0.7rem; color: #3c4748; }
+
+.lg-label { font-size: 0.85rem; color: #2b3536; margin: 8px 0 6px; }
+.lg-input { height: 34px; padding: 0 10px; border: 1px solid #cfd5d3; border-radius: 4px; background: #e8ebe9; color: #4a5759; font-size: 0.85rem; }
+
+.lg-btn { height: 36px; border-radius: 5px; font-size: 0.95rem; margin-top: 12px; }
+.lg-primary { margin-top: 20px; background: var(--vilpe-blue); border: 1px solid var(--vilpe-blue); color: #fff; }
+.lg-primary:hover { background: var(--slate-dark); }
+.lg-outline { background: #fff; border: 1px solid var(--vilpe-blue); color: var(--slate-dark); }
+.lg-outline:hover { background: var(--slate-soft); }
+.lg-error { color: var(--brick); margin-top: 10px; font-size: 0.85rem; }
+.lg-note { color: var(--ink-3); font-size: 0.72rem; text-align: center; margin-top: 12px; }.lg-name b { font-weight: 800; font-style: italic; letter-spacing: -0.02em; }
+
+.lg-logo-img { height: 30px; width: auto; align-self: center; }

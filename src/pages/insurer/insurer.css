@@ -1,0 +1,43 @@
+/* Insurer portfolio */
+.stat-small { font-size: 0.85rem; font-weight: 400; color: var(--ink-3); letter-spacing: 0; }
+.stat .stat-label:first-of-type { padding-right: 44px; }
+.ico-teal { background: #dcece9; color: #2f7a6e; }
+.ico-gold { background: var(--amber-soft); color: var(--amber-ink); }
+.ico-red { background: var(--brick-soft); color: var(--brick); }
+
+.ins-table-card { margin-bottom: 16px; padding-bottom: 14px; }
+.ins-table-wrap { overflow-x: auto; margin: 12px -20px 0; }
+.ins-table { width: 100%; border-collapse: collapse; min-width: 680px; font-size: 0.95rem; }
+.ins-table th, .ins-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--line-2); vertical-align: middle; }
+.ins-table thead th { font-weight: 600; font-size: 0.88rem; color: var(--ink-2); background: var(--paper-2); border-bottom-color: var(--line); white-space: nowrap; }
+.ins-table tbody th { font-weight: 500; }
+.ins-table tbody th small { display: block; margin-top: 2px; color: var(--ink-3); font-weight: 400; font-size: 0.8rem; }
+.ins-table .r { text-align: right; }
+.ins-table tr.is-live { background: #e3efec; box-shadow: inset 4px 0 0 #2f7a6e; }
+.ins-table tr.is-example { color: var(--ink-2); }
+.ins-premium { font-weight: 600; color: #2f7a6e; }
+.grade { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; color: #fff; font-weight: 600; font-size: 0.9rem; }
+.grade-A { background: #2f7a6e; }
+.grade-B { background: var(--amber); }
+.grade-C { background: #8a9597; }
+.ins-note { margin-top: 10px; }
+
+.ins-grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; align-items: start; }
+.ins-side { display: grid; gap: 16px; }
+@media (min-width: 900px) { .ins-grid { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); } }
+
+.ins-list { list-style: none; margin: 12px 0 0; padding: 0; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.ins-list li + li { border-top: 1px solid var(--line-2); }
+
+.ins-row { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; padding: 11px 14px; }
+.ins-fault { display: flex; gap: 8px; align-items: flex-start; padding: 10px 14px; background: #7d8789; color: #fff; font-size: 0.9rem; }
+.ins-fault svg { flex: none; margin-top: 2px; }
+
+.ins-verify { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 8px; }
+.ins-verify input { flex: 1 1 200px; height: 44px; padding: 0 12px; border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+.ins-verify .btn { flex: 1 1 100px; }
+.link-btn { border: none; background: none; padding: 0; color: var(--slate-dark); text-decoration: underline; font-size: inherit; }
+.ins-result { margin-top: 10px; padding: 10px 12px; border-radius: 10px; font-size: 0.92rem; }
+.ins-result.ok { background: var(--moss-soft); color: #3c5f2b; }
+.ins-result.bad { background: var(--brick-soft); color: #8e3424; }
+.ins-task { padding: 8px 10px; background: var(--paper-2); }

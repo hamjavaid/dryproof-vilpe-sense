@@ -1,0 +1,26 @@
+/* Structure detail */
+.detail { max-width: 980px; margin: 0 auto; }
+.detail-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 14px; }
+.detail-head h1 { margin-top: 4px; }
+.detail-score { display: flex; align-items: center; gap: 12px; }
+.detail-score .big { font-size: 2.4rem; font-weight: 600; line-height: 1; letter-spacing: -0.02em; }
+.detail-score .big small { font-size: 1rem; font-weight: 400; color: var(--ink-3); letter-spacing: 0; }
+.detail-say { margin-bottom: 16px; }
+
+.charts { display: grid; gap: 12px; margin-bottom: 12px; }
+.chart-card { padding: 16px 18px 12px; }
+.chart-card .chart { margin-top: 8px; }
+
+.events { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 10px; }
+.event-group { border: 1px solid var(--line); border-radius: 10px; background: var(--paper); }
+.event-group summary { list-style: none; cursor: pointer; padding: 12px 14px 12px 38px; position: relative; display: grid; gap: 4px; }
+.event-group summary::-webkit-details-marker { display: none; }
+.event-group summary::before {
+  content: ''; position: absolute; left: 16px; top: 19px; width: 7px; height: 7px;
+  border-right: 2px solid var(--ink-2); border-bottom: 2px solid var(--ink-2); transform: rotate(-45deg); transition: transform 0.15s;
+}
+.event-group[open] summary::before { transform: rotate(45deg); top: 16px; }
+.event-head { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.event-sub { margin: 0; padding: 4px 14px 12px 38px; display: grid; gap: 4px; font-size: 0.82rem; color: var(--ink-2); border-top: 1px solid var(--line-2); }
+.event-sub li { padding-top: 6px; }
+.detail-svc { margin: -6px 0 16px; }
