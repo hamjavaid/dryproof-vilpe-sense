@@ -59,18 +59,42 @@ Tests: `tests/test_engine.py` (19 tests).
 
 ## Run it
 
+**Live demo:** https://hamjavaid.github.io/dryproof-vilpe-sense/
+
+### Web app (all you need to try DryProof)
+
+Requirements: [Node.js](https://nodejs.org) 18 or newer (tested with Node 22). Git is optional.
+
 ```bash
-npm install
-npm run dev        # http://localhost:5173
-npm run build      # static site in dist/, works on any static host
+git clone https://github.com/hamjavaid/dryproof-vilpe-sense.git
+cd dryproof-vilpe-sense
+npm install        # once, downloads the libraries
+npm run dev        # starts the app at http://localhost:5173
 ```
 
-Engine (needs VILPE's data, see below):
+Open http://localhost:5173 and pick a demo role (Property owner, Insurer or VILPE service), or press **Watch the story** for the guided pitch. No password and no server are needed: the app reads `public/data.json`.
+
+Other commands:
+
+```bash
+npm run build      # builds a static site into dist/ (works on any static host)
+npm run preview    # serves the built site at http://localhost:4173
+```
+
+Demo tips:
+- Open two browser windows side by side (VILPE service and Property owner). Resolving a work order in one shows up in the other's notification bell.
+- **Reset demo** on the Work orders page restores the starting state.
+- Internet is only needed for fonts and fleet map tiles.
+
+### Engine (optional, to regenerate the data)
+
+Requirements: Python 3.10 or newer, and VILPE's data files (not included, see the data note).
 
 ```bash
 pip install -r engine/requirements.txt
-python engine/step_a_clean.py   # then steps b to f
-pytest tests
+python engine/step_a_clean.py        # then step_b ... step_f in order
+python engine/step_f_export.py       # writes public/data.json for the app
+pytest tests                         # 19 tests
 ```
 
 ## Data note
