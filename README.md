@@ -60,6 +60,7 @@ Tests: `tests/test_engine.py` (19 tests).
 ## Run it
 
 **Live demo:** https://hamjavaid.github.io/dryproof-vilpe-sense/
+**Note:** Just select any role and click to sign in; since it is hardcoded,(For proof of concept ) it will take you to the required Role.
 
 ### Web app (all you need to try DryProof)
 
